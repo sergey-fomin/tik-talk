@@ -1,0 +1,30 @@
+@if (profile) {
+<div class="profile-card">
+  <div class="profile-card__user-info">
+    @if (profile.avatarUrl) {
+    <img
+      class="profile-card__avatar"
+      alt="avatar"
+      [src]="profile.avatarUrl | imgUrl"
+    />
+    } @else {
+    <div class="profile-card__avatar"></div>
+    }
+    <p class="profile-card__fullname">
+      {{ profile.firstName }} {{ profile.lastName }}
+    </p>
+    <p class="profile-card__nickname">{{ profile.username }}</p>
+  </div>
+  <p class="profile-card__description">{{ profile.description }}</p>
+  <ul class="profile-card__skills">
+    @for (skill of profile.stack; track $index) {
+    <li class="profile-card__skill-tag">
+      {{ skill }}
+    </li>
+    }
+  </ul>
+  <div class="profile-card__actions">
+    <button class="profile-card__action-btn">Подписаться</button>
+  </div>
+</div>
+}

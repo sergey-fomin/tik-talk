@@ -1,0 +1,7 @@
+@use 'global-vars' as *;
+
+body {
+    color: $light-solid;
+    background-color: $dark-solid;
+    font-family: "JetBrains Mono", sans-serif;
+}

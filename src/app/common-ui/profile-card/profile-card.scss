@@ -1,0 +1,64 @@
+@use 'global-vars' as *;
+
+.profile-card {
+    padding: 32px 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) minmax(100px, 1fr) min-content;
+    align-items: center;
+    gap: 32px;
+    background-color: $dark-solid;
+    border-radius: $border-radius;
+    border: 1px solid $light-solid;
+
+    &__user-info {
+        display: grid;
+        grid-template-areas:
+            'avatar name'
+            'avatar nickname';
+        gap: 4px 20px;
+    }
+
+    &__avatar {
+        width: $avatar-size;
+        height: $avatar-size;
+        grid-area: avatar;
+        border-radius: 50%;
+        background-color: $primary;
+    }
+
+    &__fullname {
+        grid-area: name;
+        align-self: end;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 800;
+    }
+
+    &__nickname {
+        grid-area: nickname;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+    }
+
+    &__skills {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    &__skill-tag {
+        padding: 4px 8px;
+        border: 1px solid $light-solid;
+        border-radius: $border-radius;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+    }
+}

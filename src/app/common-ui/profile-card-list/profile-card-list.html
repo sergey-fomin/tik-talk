@@ -1,0 +1,7 @@
+<ul class="profile-card-list">
+  @for (profile of profiles; track profile.id) {
+  <li class="profile-card-list__item">
+    <tt-profile-card [profile]="profile"></tt-profile-card>
+  </li>
+  }
+</ul>

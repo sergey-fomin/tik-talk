@@ -1,0 +1,7 @@
+.profile-card-list {
+    &__item {
+        &:not(:first-of-type) {
+            margin-top: 8px;
+        }
+    }
+}
