@@ -1,7 +1,41 @@
 @use 'global-vars' as *;
+@use 'mixins' as *;
+
+html,
+body {
+    height: 100%;
+}
 
 body {
     color: $light-solid;
     background-color: $dark-solid;
     font-family: "JetBrains Mono", sans-serif;
+    background-image: url("/assets/images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+}
+
+h1 {
+    @include h1
+}
+
+h2 {
+    @include h2
+}
+
+h3 {
+    @include h3
+}
+
+h4 {
+    @include h4
+}
+
+h5 {
+    @include h5
+}
+
+h6 {
+    @include h6
 }

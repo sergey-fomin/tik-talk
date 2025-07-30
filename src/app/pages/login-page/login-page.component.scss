@@ -1,0 +1,66 @@
+@use 'global-vars' as *;
+@use 'mixins' as *;
+
+:host {
+    min-height: 100vh;
+    max-width: 1112px;
+    margin-inline: auto;
+    padding-inline: min(10%, 50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-form {
+    flex: 0 0 440px;
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__text-control {
+        margin-top: 16px;
+    }
+
+    &__control-label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &__input {
+        padding: 12px 20px;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+        color: $light-solid;
+        background-color: $dark-solid;
+        border: 1px solid $light-solid;
+        border-radius: $border-radius;
+
+        &::placeholder {
+            color: $light-transparent;
+        }
+    }
+
+    &__submit-btn {
+        @include btn-reset;
+        width: 100%;
+        margin-top: 32px;
+        padding: 10px 20px;
+        color: $dark-solid;
+        background-color: $primary;
+        border: 1px solid $dark-solid;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.logo {
+    flex: 0 0 440px;
+}

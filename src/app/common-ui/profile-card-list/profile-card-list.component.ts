@@ -2,15 +2,15 @@ import { Component, inject, Input } from '@angular/core';
 import { Profile } from '../../data/interfaces/profile.interface';
 import { ProfileService } from '../../data/services/profile.service';
 import { map } from 'rxjs';
-import { ProfileCard } from "../profile-card/profile-card";
+import { ProfileCardComponent } from "../profile-card/profile-card.component";
 
 @Component({
   selector: 'tt-profile-card-list',
-  imports: [ProfileCard],
-  templateUrl: './profile-card-list.html',
-  styleUrl: './profile-card-list.scss'
+  imports: [ProfileCardComponent],
+  templateUrl: './profile-card-list.component.html',
+  styleUrl: './profile-card-list.component.scss'
 })
-export class ProfileCardList {
+export class ProfileCardListComponent {
   protected readonly profileService = inject(ProfileService)
 
   public profiles: Profile[] = [];

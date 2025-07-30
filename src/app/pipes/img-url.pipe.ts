@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Profile } from '../data/interfaces/profile.interface';
 
 @Pipe({
   name: 'imgUrl'

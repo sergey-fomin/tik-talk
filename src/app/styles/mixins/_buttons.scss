@@ -1,0 +1,14 @@
+@mixin btn-reset {
+
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    outline: transparent;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: inherit;
+    -webkit-appearance: none; // For WebKit browsers
+    -moz-appearance: none; // For Mozilla browsers
+}
